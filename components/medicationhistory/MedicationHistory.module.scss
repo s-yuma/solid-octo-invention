@@ -1,0 +1,32 @@
+.HistoryList {
+    text-align: center;
+    top: auto;
+    margin-top: 20px;
+    
+}
+
+.disease {
+    padding-right: 200px;
+    color: burlywood;              /* 文字色 */
+    margin: 5px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    border-style: solid;
+    font-size: 20px;
+    height: 30px;
+    text-align: left;
+    width: 500px;
+}
+
+.medicine {
+    padding-right: 200px;
+    color: orange;                /* 文字色 */
+    margin: 10px;              /* 外側の余白 */
+    border-radius:  5px;        /* 角丸指定 */
+    border-style: solid;
+}
+
+.list {
+    margin: 20px;
+    display: flex;
+    margin-left: 350px;
+}

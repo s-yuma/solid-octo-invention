@@ -9,14 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "18.11.9",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/react": "^5.11.2",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "@material-ui/core": "^4.12.4",
+    "@supabase/supabase-js": "^2.1.0",
+    "@types/node": "^18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "axios": "^1.1.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "mongodb": "^4.12.0",
     "next": "13.0.2",
+    "next-transpile-modules": "^10.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "serverless-mysql": "^1.5.4",
     "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "sass": "^1.56.0"
   }
 }
