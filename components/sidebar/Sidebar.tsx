@@ -8,21 +8,26 @@ export default function Sidebar() {
     return(
         <div className={style.container}>
             <ul className={style.index_ul}>
-                <Link href="/">
-                    <li className={style.li}>
-                        <Button style={{color:'white', backgroundColor: '#d3a570',width:'170px',height: '50px',left: '-39px'}} >ホーム</Button>
+                <Link href="/" className={style.li}>
+                    <li>
+                        <Button style={{color:'white', backgroundColor: 'aquamarine',width:'170px',height: '50px',left: '-39px','margin': '2px 0'}} className={style.button}>ホーム</Button>
                     </li>
                 </Link>
-                <Link href="/reserve/Reserve">
-                    <li>
-                        <Button  style={{color:'white', backgroundColor: 'blue', width:'170px',height: '50px', left: '-39px'}}>予約</Button>
+                <Link href="/reserve/Reserve" className={style.li}>
+                    <li >
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px', left: '-39px','margin': '2px 0'}} className={style.button}>予約</Button>
                     </li>
                 </Link>
-                <Link href="/medicationhistory/MedicationHistory">
-                    <li>
-                        <Button style={{color:'white', backgroundColor: 'green', width:'170px',height: '50px' ,left: '-39px'}}>薬歴</Button>
+                <Link href="/medicationhistory/MedicationHistory" className={style.li}>
+                    <li >
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '2px 0'}} className={style.button}>薬歴</Button>
                     </li>
                 </Link>    
+                <Link href="/access/Access" className={style.li}>
+                    <li >
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '2px 0'}} className={style.button}>アクセス</Button>
+                    </li>
+                </Link>   
             </ul>
         </div>
     )
