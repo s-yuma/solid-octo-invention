@@ -1,10 +1,9 @@
-
 import React, { useEffect } from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
 
 
-export const useAddMedicalList = () => {
+export const UseAddMedicalList2 = () => {
   const [medicalList, setMedicalList] = useState<any>({});
 
   useEffect(() => {
@@ -24,8 +23,6 @@ export const useAddMedicalList = () => {
         setMedicalList(list);
         console.log(typeof(list))
       }
-
-    
   }
 
   return {medicalList, fetch};
