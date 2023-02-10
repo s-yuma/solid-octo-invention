@@ -3,7 +3,7 @@ import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
 
 
-export const UseAddMedicalList2 = () => {
+export const UseAddMedicalList = () => {
   const [medicalList, setMedicalList] = useState<any>({});
 
   useEffect(() => {
