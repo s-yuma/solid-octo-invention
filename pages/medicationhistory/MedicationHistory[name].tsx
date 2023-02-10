@@ -3,12 +3,13 @@ import { useState} from 'react'
 import MedicationHistoryInput from '../../components/medicationhistory/MedicationHistoryInput'
 import MedicationHistoryList from '../../components/medicationhistory/MedicationHistoryList'
 import Sidebar from '../../components/sidebar/Sidebar'
-import Heder from '../../components/heder/Heder'
+import { useRouter } from 'next/router'
 
 export type FlagContextType = {
   updata: boolean;
   setUpdata: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
 export const UpdateContext = createContext<FlagContextType>({
   updata: false,
   setUpdata: () => {},
@@ -25,13 +26,20 @@ export default function MedicationHistory() {
 //     setUpdata 
 // }
 
+const router = useRouter();
+const name = router.query.name;
+
+
   return (
     <>
     <UpdateContext.Provider value={{updata,setUpdata}}>
-      <Heder/>
-      <Sidebar/>
-      <MedicationHistoryInput />
-      <MedicationHistoryList/>
+      <div style={{"marginTop":"-20px","marginBottom":"-20px"}}>
+        <div style={{"marginTop":"20px"}}>
+          <Sidebar/>
+        </div>
+      <MedicationHistoryInput name={name}/>
+      <MedicationHistoryList name={name}/>
+      </div>
     </UpdateContext.Provider>
     </>
   )

@@ -1,32 +1,32 @@
 .HistoryList {
-    text-align: center;
-    top: auto;
-    margin-top: 20px;
-    
+    padding-top: 50px;
+    background-color:#039BE5;
 }
 
-.disease {
-    padding-right: 200px;
-    color: burlywood;              /* 文字色 */
-    margin: 5px;              /* 外側の余白 */
-    border-radius:  5px;        /* 角丸指定 */
-    border-style: solid;
-    font-size: 20px;
-    height: 30px;
-    text-align: left;
-    width: 500px;
-}
+.HistoryInput {
+    padding-left: 270px;
+    padding-top: 30px;
+    background-color:#039BE5;
 
-.medicine {
-    padding-right: 200px;
-    color: orange;                /* 文字色 */
-    margin: 10px;              /* 外側の余白 */
-    border-radius:  5px;        /* 角丸指定 */
-    border-style: solid;
 }
 
 .list {
     margin: 20px;
     display: flex;
-    margin-left: 350px;
+    margin-left: 200px;
+}
+
+.excel {
+    margin-left: 30px;
+    background-color:white;
+    color: green;
+    border-color: green;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.ListTitle {
+    display: flex;
+    padding-left: 525px;
+    
 }

@@ -1,34 +1,41 @@
 import Button  from "@material-ui/core/Button"
 import style from "../../styles/Sidebar.module.scss"
 import Link from "next/link"
+import { useContext } from "react"
+import { useRouter } from "next/router";
 
 
 export default function Sidebar() {
-
+    const router = useRouter();
+    const name = router.query.name
+    
     return(
-        <div className={style.container}>
-            <ul className={style.index_ul}>
-                <Link href="/" className={style.li}>
+        <>
+            <div className={style.container} >
+                <ul>
+                    <Link href="/" className={style.li}>
                     <li>
-                        <Button style={{color:'white', backgroundColor: 'aquamarine',width:'170px',height: '50px',left: '-39px','margin': '2px 0'}} className={style.button}>ホーム</Button>
+                        <Button style={{color:'white', backgroundColor: 'aquamarine',width:'170px',height: '50px',left: '-39px','margin': '10px 0'}} className={style.button}>ホーム</Button>
                     </li>
                 </Link>
-                <Link href="/reserve/Reserve" className={style.li}>
+
+                <Link href={{ pathname: `/reserve/Reserve[name]`, query: {name: name}  }} className={style.li}>
                     <li >
-                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px', left: '-39px','margin': '2px 0'}} className={style.button}>予約</Button>
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px', left: '-39px','margin': '10px 0'}} className={style.button}>予約</Button>
                     </li>
                 </Link>
-                <Link href="/medicationhistory/MedicationHistory" className={style.li}>
+                <Link href={{ pathname: `/record/Record[name]`, query: {name: name}  }} className={style.li}>
                     <li >
-                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '2px 0'}} className={style.button}>薬歴</Button>
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '10px 0'}} className={style.button}>記録</Button>
                     </li>
-                </Link>    
-                <Link href="/access/Access" className={style.li}>
+                </Link> 
+                <Link href={{ pathname: `/medicationhistory/MedicationHistory[name]`, query: {name: name}  }} className={style.li}>
                     <li >
-                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '2px 0'}} className={style.button}>アクセス</Button>
+                        <Button style={{color:'white', backgroundColor: 'aquamarine', width:'170px',height: '50px' ,left: '-39px','margin': '10px 0'}} className={style.button}>薬歴</Button>
                     </li>
-                </Link>   
+                </Link> 
             </ul>
         </div>
+        </>
     )
 }

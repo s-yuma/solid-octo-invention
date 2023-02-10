@@ -2,27 +2,29 @@ import React, { useContext } from 'react'
 import { useState} from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import styles from './MedicationHistory.module.scss'
-import { useAddMedicalList } from './useAddmedicalList';
-import { useUser } from '@auth0/nextjs-auth0/client';
-import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory';
+import { useAddMedicalList } from './UseAddmedicalList';
+import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory[name]';
+import { TextField } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { blueGrey } from '@mui/material/colors';
+import Button, { ButtonProps } from '@mui/material/Button';
 
-export default function MedicationHistory() {
+
+export default function MedicationHistory(props:any) {
 const [diseasename, setDiseaseName ]= useState("")
 const [medicine, setMediCine] = useState("")
 const { fetch } = useAddMedicalList();
-const { user } = useUser();
-const [name, setName] = useState(user?.name)
 const {updata, setUpdata}= useContext(UpdateContext)
 
 const pushMedicalHistory = async (e:any)=> {
-    setName(user?.name)
-    console.log(name)
+    // setName(user?.name)
+    // console.log(name)
     e.preventDefault();
     try {
         const { data, error } = await supabase
-        .from('medicinehistory')
+        .from('medicinehistory2')
         .insert([{
-            name: name,
+            name: props.name,
             diseasename,
             medicine
         }])
@@ -30,24 +32,36 @@ const pushMedicalHistory = async (e:any)=> {
     } catch (error) {
         console.log(error)
     }
-
-    fetch();
-    setDiseaseName('');
-    setMediCine('');
+    fetch()
+    setDiseaseName('')
+    setMediCine('')
     setUpdata(updata?false:true)
     }
+
+    const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+        color: theme.palette.getContrastText(blueGrey[200]),
+        backgroundColor: blueGrey[100],
+        
+        '&:hover': {
+          backgroundColor: blueGrey[400],
+        },
+      }));
+
+
 
 
     return (
         <>
-        <div className={styles.HistoryList}>
-        <h3>◆薬歴入力◆</h3>
+        <div className={styles.HistoryInput}>
+
+        <h3 style={{"paddingLeft":"450px"}}>◆薬歴入力◆</h3>
         <form onSubmit={pushMedicalHistory}>
-            <input type="text" value={diseasename} placeholder='病名を入力してください' onChange={event => setDiseaseName(event.target.value)}/>
-            <input type="text" value={medicine} placeholder='薬名を入力してください' onChange={event => setMediCine(event.target.value)}/>
-            <button type="submit">登録</button>
+            <TextField  label="薬名を入力してください" variant="outlined" onChange={event => setDiseaseName(event.target.value)} style={{"width":"500px","backgroundColor":"white"}}/>
+            <TextField  label="病名・症状を入力してください" variant="outlined" onChange={event => setMediCine(event.target.value)} style={{"width":"500px","backgroundColor":"white"}}/>
+            <ColorButton type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} >登録</ColorButton>
         </form>
         </div>
+       
     </>
     )
 }

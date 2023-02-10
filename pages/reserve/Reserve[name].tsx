@@ -1,9 +1,10 @@
 import Sidebar from "../../components/sidebar/Sidebar";
-import Heder from "../../components/heder/Heder";
-import dynamic from 'next/dynamic'
 import React, { FC, createContext,useState } from 'react'
-import Calender from "../../components/calender/Calender";
-
+import { useRouter } from "next/router";
+import dynamic from 'next/dynamic';
+const Calender = dynamic(() => import('../../components/calender/Calender'), {
+    ssr: false
+});
 export type FlagContextType = {
   updata: boolean;
   setUpdata: React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,16 +16,17 @@ export const UpdateContext = createContext<FlagContextType>({
 });;
 
 export default function Reserve() {
-
+  const router = useRouter();
+  const name = router.query.name;
+  console.log(name+"test")
 const [updata,setUpdata]=useState<boolean>(false)
 
   return (
     
     <>
       <UpdateContext.Provider value={{updata,setUpdata}}>
-        <Heder/>
-        <Sidebar/> 
-        <Calender/>
+        <Sidebar /> 
+        <Calender name={name} />
       </UpdateContext.Provider>
     </>
   );

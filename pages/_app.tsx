@@ -1,16 +1,13 @@
 // pages/_app.js
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { UserProvider } from '@auth0/nextjs-auth0/client';
-import Header from '../components/Header';
+import "../styles/globals.css";
 
- function MyApp({ Component, pageProps }: AppProps) {
-  const { user } = pageProps;
+ function MyApp({ Component, pageProps,router }: AppProps) {
   return (
-    <UserProvider user={user}>
-      <Header />
-      <Component {...pageProps} />
-    </UserProvider>
+    <>
+      <Component {...pageProps} key={router.asPath} />
+    </>
   );
 }
 export default MyApp;

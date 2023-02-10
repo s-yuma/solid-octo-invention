@@ -2,21 +2,22 @@ import React, { useEffect } from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
 import { useRouter } from 'next/router';
-export const UseAddcalenderList = (props:any) => {
+
+
+export const HomeCalenderList = () => {
   const [calenderList, setCalenderList] = useState<any>({});
 
   useEffect(() => {
-    fetch(props.name)
+    fetch()
     console.log(+"yobi")
   },[])
 
 
-  const fetch = async (name:string | string[] | undefined) => {
+  const fetch = async () => {
     console.log(name+"fetc呼出先")
     let {data: list, error } = await supabase
       .from('reserve2')
       .select('title,start')
-      .eq("name",name)
       console.log("読み込み")
       console.log(list)
       if(error) {
