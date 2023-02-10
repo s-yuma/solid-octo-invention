@@ -4,13 +4,13 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin, { DateClickArg } from "@fullcalendar/interaction";
 import { useCallback,useEffect } from "react";
-import { UseAddcalenderList } from './UseAddcalenderList';
+import { UseCalenderListRead } from './UseCalenderListRead';
 import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory[name]';
 
 
 export default function CalenderList(props:any) {
     const {updata, setUpdata}= useContext(UpdateContext)
-    const {calenderList,fetch} = UseAddcalenderList(props.name);
+    const {calenderList,fetch} = UseCalenderListRead(props.name);
 
     useEffect(() => {
       fetch(props.name)

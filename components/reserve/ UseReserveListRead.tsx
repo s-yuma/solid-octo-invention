@@ -3,7 +3,7 @@ import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
 import { useUser } from "@auth0/nextjs-auth0/client";
 
-export const UseAddReserveList = () => {
+export const UseReserveListiRead = () => {
   const [reserveList, setReserveList] = useState<any>({});
   const { user } = useUser();
   useEffect(() => {

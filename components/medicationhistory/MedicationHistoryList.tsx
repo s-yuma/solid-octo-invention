@@ -1,6 +1,6 @@
 import styles from './MedicationHistory.module.scss'
 import { useState } from 'react';
-import { UseAddMedicalList } from './UseAddmedicalList';
+import { UseMedicalListRead } from './UseMedicalListRead';
 import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory[name]';
 import React, { useContext, useEffect  } from 'react'
 import ExcelJS from "exceljs";
@@ -14,7 +14,7 @@ import { supabase } from '../../utils/supabaseClient'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 export default function MedicationHistoryList(props:any) {
-    const {medicalList,fetch} = UseAddMedicalList();
+    const {medicalList,fetch} = UseMedicalListRead();
     const {updata, setUpdata}= useContext(UpdateContext)
 useEffect(() => {
   fetch()

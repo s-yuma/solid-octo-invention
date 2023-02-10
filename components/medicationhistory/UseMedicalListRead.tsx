@@ -1,29 +1,29 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
-import { useUser } from "@auth0/nextjs-auth0/client";
 
-export const UseAddReserveList = () => {
-  const [reserveList, setReserveList] = useState<any>({});
-  const { user } = useUser();
+
+export const UseMedicalListRead = () => {
+  const [medicalList, setMedicalList] = useState<any>({});
+
   useEffect(() => {
     fetch()
   },[])
 
   const fetch = async () => {
     let {data: list, error } = await supabase
-      .from('reserve')
+      .from('medicinehistory2')
       .select('*')
-      .eq("title", user?.name)
+      .order('id',{ascending: false})
       console.log("読み込み")
       console.log(list)
       if(error) {
         console.log(error)
       } else {
-        setReserveList(list);
+        setMedicalList(list);
         console.log(typeof(list))
       }
   }
 
-  return {reserveList, fetch};
+  return {medicalList, fetch};
 }

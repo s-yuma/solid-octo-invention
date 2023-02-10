@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useAddReserveList } from "./useAddReserveList"
+import { UseReserveListiRead } from "./ UseReserveListRead"
 
 export default function Reserve() {
-    const {reserveList,fetch} = useAddReserveList();
+    const {reserveList,fetch} = UseReserveListiRead();
 
     useEffect(() => {
         fetch()
