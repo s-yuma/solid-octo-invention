@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useState} from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import styles from './MedicationHistory.module.scss'
-import { UseAddMedicalList } from './UseAddmedicalList'
+import { UseMedicalListRead } from './UseMedicalListRead'
 import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory[name]';
 import { TextField } from '@material-ui/core';
 import { styled } from '@mui/material/styles';
@@ -13,7 +13,7 @@ import Button, { ButtonProps } from '@mui/material/Button';
 export default function MedicationHistory(props:any) {
 const [diseasename, setDiseaseName ]= useState("")
 const [medicine, setMediCine] = useState("")
-const { fetch } = UseAddMedicalList();
+const { fetch } = UseMedicalListRead();
 const {updata, setUpdata}= useContext(UpdateContext)
 
 const pushMedicalHistory = async (e:any)=> {

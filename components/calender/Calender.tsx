@@ -4,7 +4,7 @@ import { createContext, useCallback,useEffect, useRef } from "react";
 import style from "../../styles/Calender.module.scss"
 import { supabase } from '../../utils/supabaseClient'
 import { useState } from 'react'
-import { UseAddcalenderList } from "./UseAddcalenderList";
+import { UseCalenderListRead } from "./UseCalenderListRead";
 import { title } from 'process';
 import React, { useContext } from 'react'
 import { UpdateContext } from '../../pages/medicationhistory/MedicationHistory[name]';
@@ -22,7 +22,7 @@ export default function Calender(props:any) {
   const [title, setTitle] = useState<string>("")
 
   const {updata, setUpdata}= useContext(UpdateContext)
-  const {calenderList,fetch} = UseAddcalenderList(props.name);
+  const {calenderList,fetch} = UseCalenderListRead(props.name);
 
   useEffect(() => {
     fetch(props.name)
