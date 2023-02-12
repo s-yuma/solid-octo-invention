@@ -11,8 +11,8 @@ import Button, { ButtonProps } from '@mui/material/Button';
 
 
 export default function MedicationHistory(props:any) {
-const [diseasename, setDiseaseName ]= useState("")
-const [medicine, setMediCine] = useState("")
+const [diseasename, setDiseaseName ]= useState<string>("")
+const [medicine, setMediCine] = useState<string>("")
 const { fetch } = UseMedicalListRead();
 const {updata, setUpdata}= useContext(UpdateContext)
 
@@ -56,8 +56,8 @@ const pushMedicalHistory = async (e:any)=> {
 
         <h3 style={{"paddingLeft":"450px"}}>◆薬歴入力◆</h3>
         <form onSubmit={pushMedicalHistory}>
-            <TextField  label="薬名を入力してください" variant="outlined" onChange={event => setDiseaseName(event.target.value)} style={{"width":"500px","backgroundColor":"white"}}/>
-            <TextField  label="病名・症状を入力してください" variant="outlined" onChange={event => setMediCine(event.target.value)} style={{"width":"500px","backgroundColor":"white"}}/>
+            <TextField value={diseasename} label="薬名を入力してください" variant="outlined" onChange={event => setDiseaseName(event.target.value)} className={styles.TextBox} required/>
+            <TextField value={medicine} label="病名・症状を入力してください" variant="outlined" onChange={event => setMediCine(event.target.value)} className={styles.TextBox} required/>
             <ColorButton type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} >登録</ColorButton>
         </form>
         </div>

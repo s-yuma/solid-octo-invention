@@ -14,7 +14,7 @@ export const HomeCalenderList = () => {
 
 
   const fetch = async () => {
-    console.log(name+"fetc呼出先")
+    console.log("fetc呼出先")
     let {data: list, error } = await supabase
       .from('reserve2')
       .select('title,start')

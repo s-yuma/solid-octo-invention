@@ -77,7 +77,7 @@ const Update = async (e:any,id:string) => {
         </div>
             {Object.values(medicalList).map((list:any,index) => (
                 <div key={index} className={styles.list} >
-               <Accordion style={{"marginLeft":"70px","marginBottom":"30px","width":"1000px"}}>
+               <Accordion style={{"marginLeft":"70px","marginBottom":"10px","width":"1000px"}}>
                 {list.end ? (
                   <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}

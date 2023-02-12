@@ -1,13 +1,18 @@
 .HistoryList {
-    padding-top: 50px;
-    background-color:#039BE5;
+    background-color: #72bde3;
+    min-height: 100vh;
+padding-bottom: 20px;
+}
+
+.container {
+    background-color:#72bde3;
+    height: 100vz;
 }
 
 .HistoryInput {
     padding-left: 270px;
     padding-top: 30px;
-    background-color:#039BE5;
-
+    // background-color:#039BE5;
 }
 
 .list {
@@ -28,5 +33,9 @@
 .ListTitle {
     display: flex;
     padding-left: 525px;
-    
+}
+
+.TextBox {
+    width:500px;
+    background-color: white;
 }

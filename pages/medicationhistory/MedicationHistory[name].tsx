@@ -4,6 +4,7 @@ import MedicationHistoryInput from '../../components/medicationhistory/Medicatio
 import MedicationHistoryList from '../../components/medicationhistory/MedicationHistoryList'
 import Sidebar from '../../components/sidebar/Sidebar'
 import { useRouter } from 'next/router'
+import styles  from '../../components/medicationhistory/MedicationHistory.module.scss'
 
 export type FlagContextType = {
   updata: boolean;
@@ -33,13 +34,11 @@ const name = router.query.name;
   return (
     <>
     <UpdateContext.Provider value={{updata,setUpdata}}>
-      <div style={{"marginTop":"-20px","marginBottom":"-20px"}}>
-        <div style={{"marginTop":"20px"}}>
-          <Sidebar/>
-        </div>
-      <MedicationHistoryInput name={name}/>
-      <MedicationHistoryList name={name}/>
-      </div>
+  <div className={styles.container}>
+  <Sidebar/>
+        <MedicationHistoryInput name={name}/>
+        <MedicationHistoryList name={name}/>
+  </div>
     </UpdateContext.Provider>
     </>
   )

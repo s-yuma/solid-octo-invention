@@ -76,7 +76,7 @@ export default function Calender(props:any) {
       <form onSubmit={pushReserve} id="yoyaku" method='post'>
         <div style={{"display":"flex","justifyContent":"space-between","width":"550px", "height":"55px","marginLeft":"30px"}}>
         
-        <input type="date" onChange={event => setYmd(event.target.value) } value={ymd} style={{"flexBasis":"auto"}}/>
+        <input type="date" onChange={event => setYmd(event.target.value) } value={ymd} style={{"flexBasis":"auto"}} required/>
        
   <FormControl style={{"backgroundColor":"white","width":"100px"}} >
   <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -116,7 +116,7 @@ export default function Calender(props:any) {
 </FormControl>
 
 <div>
-<TextField id="filled-basic" label="予定" variant="filled" style={{"backgroundColor":"white"}} value={title} onChange={(event) => {
+<TextField id="filled-basic" required label="予定" variant="filled" style={{"backgroundColor":"white"}} value={title} onChange={(event) => {
           setTitle(event.target.value)}} />
 </div>
 <ColorButton type="submit" size="large" variant="outlined" >登録</ColorButton>
