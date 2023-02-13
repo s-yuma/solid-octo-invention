@@ -18,7 +18,7 @@ export default function RecordCalender(props:any) {
       fetch(props.name)
     },[recordList])
 
-    console.log(props.name+"pro")
+    console.log(props.name)
     
   return (
     <>
