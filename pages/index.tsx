@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.scss'
 import Link from "next/link"
 // import HomeCalender from '../components/home/HomeCalender';
-import style from "../styles/Calender.module.scss"
+import style from "../components/calender/Calender.module.scss"
 import dynamic from 'next/dynamic';
 const HomeCalender = dynamic(() => import('../components/home/HomeCalender'), {
     ssr: false
