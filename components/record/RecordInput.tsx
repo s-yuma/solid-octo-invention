@@ -6,6 +6,7 @@ import RecordCalender from "../../components/record/RecordCalender";
 import { styled } from '@mui/material/styles';
 import { blue, teal, brown } from '@mui/material/colors';
 import Button, { ButtonProps } from '@mui/material/Button';
+import ExcelJS from "exceljs";
 
 export default function RecordInput(props:any){
     const { recordList, fetch } = UseRecordRead();
@@ -17,11 +18,10 @@ export default function RecordInput(props:any){
         'T'+
         ('00' + dateObj.getHours()).slice(-2) + ':' + //時間の取得
         ('00' + dateObj.getMinutes()).slice(-2) + ':' + //分の取得
-        ('00' + dateObj.getSeconds()).slice(-2) //秒の取得
+        //('00' + dateObj.getSeconds()).slice(-2) //秒の取得
+        +'0'+'0'
     )
     const time1push= async (e:any)=> {
-        // setName(user?.name)
-        // console.log(name)
         e.preventDefault();
         try {
             const { data, error } = await supabase
@@ -30,7 +30,7 @@ export default function RecordInput(props:any){
                 name: props.name,
                 title:"💩",
                 start:time,
-                
+                end:time
             }])
     
         } catch (error) {
@@ -38,12 +38,35 @@ export default function RecordInput(props:any){
         }
     
         fetch(props.name);
-        // setUpdata(updata?false:true)
         }
 
+        const ExcelDownload = async (e:any) => {
+            e.preventDefault();
+            const workbook = new ExcelJS.Workbook();
+            workbook.addWorksheet("sheet1");
+            const worksheet = workbook.getWorksheet("sheet1");
+          
+            worksheet.columns = [
+                { header: "便・尿", key: "title" },
+                { header: "時間", key: "start" }
+              ];
+          
+              Object.values(recordList).map((list:any,index) =>{
+                worksheet.addRow({title: list.title, start: list.start})
+                }
+              );
+          
+              const uint8Array = await workbook.xlsx.writeBuffer();
+              const blob = new Blob([uint8Array], {type: 'application/octet-binary'});
+              const url = window.URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = `sample.xlsx`;
+              a.click();
+              a.remove()
+          }
+
         const time2push= async (e:any)=> {
-            // setName(user?.name)
-            // console.log(name)
             e.preventDefault();
             try {
                 const { data, error } = await supabase
@@ -51,7 +74,8 @@ export default function RecordInput(props:any){
                 .insert([{
                     name: props.name,
                     title:"🚰",
-                    start:time
+                    start:time,
+                    end:time   
                 }])
         
             } catch (error) {
@@ -59,7 +83,6 @@ export default function RecordInput(props:any){
             }
         
             fetch(props.name);
-            // setUpdata(updata?false:true)
             }
 
             const ColorButton1 = styled(Button)<ButtonProps>(({ theme }) => ({
@@ -91,8 +114,12 @@ export default function RecordInput(props:any){
     return(
         <>
             <div className={styles.main}>
-            <ColorButton1 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time1push}>💩</ColorButton1>
-            <ColorButton2 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time2push} >💧</ColorButton2>
+                <ColorButton1 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time1push}>💩</ColorButton1>
+                <ColorButton2 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time2push} >💧</ColorButton2>
+                <button className={styles.excel} onClick={(e) => ExcelDownload(e)}>Excel出力</button>
+            </div>
+            <div className={styles.calender}>
+                <RecordCalender name={props.name}/>
             </div>
            
         </>

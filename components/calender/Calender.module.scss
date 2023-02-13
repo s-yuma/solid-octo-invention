@@ -1,0 +1,15 @@
+.container {
+    padding: 60px;
+    color: rgb(50, 25, 39);
+    flex: 100%;
+}
+
+.button {
+    background-Color: rgb(228, 244, 229);
+    border-Radius: 25%;
+    width: 60px;
+    &:active {
+        background-color: rgb(151, 209, 184);
+    }
+}
+

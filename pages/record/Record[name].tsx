@@ -5,9 +5,11 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext } from "react";
 import style from "../../components//record//Record.module.scss" 
 import dynamic from 'next/dynamic';
+
 const RecordCalender = dynamic(() => import('../../components/record/RecordCalender'), {
     ssr: false
 });
+
 export default function Record(props:any) {
 
     const router = useRouter();
@@ -17,11 +19,10 @@ export default function Record(props:any) {
     return(
         <>
             <div className={style.conteiner}>
-            <Sidebar/>
-            <div style={{"display":"flex","verticalAlign":"top"}}>
-                <RecordInput name={name}/>
-                <RecordCalender name={name} />
-            </div>
+                <Sidebar/>
+                <div style={{"display":"flex","verticalAlign":"top"}}>
+                    <RecordInput name={name}/>
+                </div>
             </div>
         </>
     )

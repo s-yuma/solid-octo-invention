@@ -2,7 +2,7 @@
     display:flex;
     flex-flow: column;
     padding: 30px;
-    margin-top: 100px;
+    margin-top: -10px;
 }
 
 .button1 {
@@ -34,6 +34,24 @@
 }
 
 .conteiner {
-background-color:#d298db;
+    background-color:#d7b5c7;
+    min-height: 789px
+}
 
+.excel {
+        margin-left: 30px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        margin-top: 15px;
+}
+
+.calender {
+    background-Color: #ffff;
+    margin: 20px;
+    width: 1200px;
+    padding-Right: 50px;
+    margin-Left: 90px;
+    padding: 20px;
 }

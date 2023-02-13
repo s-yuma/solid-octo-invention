@@ -1,11 +1,13 @@
 import { useEffect } from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useRouter } from "next/router";
 
 export const UseReserveListiRead = () => {
   const [reserveList, setReserveList] = useState<any>({});
-  const { user } = useUser();
+  const router = useRouter();
+  const name = router.query.name;
+
   useEffect(() => {
     fetch()
   },[])
@@ -14,7 +16,7 @@ export const UseReserveListiRead = () => {
     let {data: list, error } = await supabase
       .from('reserve')
       .select('*')
-      .eq("title", user?.name)
+      .eq("title", name)
       console.log("読み込み")
       console.log(list)
       if(error) {

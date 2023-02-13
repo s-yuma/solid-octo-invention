@@ -24,14 +24,11 @@ const Home: NextPage = (props) => {
       <div className={styles.container}>
       {users.map((user) => {
         return (
-          
           <div className={user.style1} key={user.name}>
             <Link href={{ pathname: `/record/Record[name]`, query: {name: user.name} }}  className={user.style2} >
               {user.name}
             </Link>
           </div>
-      
-          
         );
       })}
       </div>

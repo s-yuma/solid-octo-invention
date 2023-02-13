@@ -16,30 +16,18 @@ export const UpdateContext = createContext<FlagContextType>({
   setUpdata: () => {},
 });;
 
-
 export default function MedicationHistory() {
-  const [diseasename, setDiseaseName ]= useState("")
-  const [medicine, setMediCine] = useState("")
-  const [list, setList] = useState([])
-  const [updata,setUpdata]=useState<boolean>(false)
-//   const value = {
-//     update,
-//     setUpdata 
-// }
 
 const router = useRouter();
 const name = router.query.name;
 
-
   return (
     <>
-    <UpdateContext.Provider value={{updata,setUpdata}}>
-  <div className={styles.container}>
-  <Sidebar/>
-        <MedicationHistoryInput name={name}/>
-        <MedicationHistoryList name={name}/>
-  </div>
-    </UpdateContext.Provider>
+        <div className={styles.container}>
+          <Sidebar/>
+          <MedicationHistoryInput name={name}/>
+          <MedicationHistoryList name={name}/>
+        </div>   
     </>
   )
 }

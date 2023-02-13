@@ -19,15 +19,11 @@ export default function Reserve() {
   const router = useRouter();
   const name = router.query.name;
   console.log(name+"test")
-const [updata,setUpdata]=useState<boolean>(false)
 
   return (
-    
     <>
-      <UpdateContext.Provider value={{updata,setUpdata}}>
         <Sidebar /> 
         <Calender name={name} />
-      </UpdateContext.Provider>
     </>
   );
 }

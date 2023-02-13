@@ -14,11 +14,9 @@ export default function MedicationHistory(props:any) {
 const [diseasename, setDiseaseName ]= useState<string>("")
 const [medicine, setMediCine] = useState<string>("")
 const { fetch } = UseMedicalListRead();
-const {updata, setUpdata}= useContext(UpdateContext)
 
 const pushMedicalHistory = async (e:any)=> {
-    // setName(user?.name)
-    // console.log(name)
+
     e.preventDefault();
     try {
         const { data, error } = await supabase
@@ -35,20 +33,15 @@ const pushMedicalHistory = async (e:any)=> {
     fetch()
     setDiseaseName('')
     setMediCine('')
-    setUpdata(updata?false:true)
     }
 
     const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
         color: theme.palette.getContrastText(blueGrey[200]),
         backgroundColor: blueGrey[100],
-        
         '&:hover': {
           backgroundColor: blueGrey[400],
         },
       }));
-
-
-
 
     return (
         <>

@@ -9,14 +9,13 @@ export default function Reserve() {
       },[])
     return (
       <>
-      <h2>予約日時
-      </h2>
+        <h2>予約日時</h2>
         <div>
-        {Object.values(reserveList).map((list:any,index) => (
-                <div key={index}  >
-                    <div>{list.start}</div>
-                </div>
-            ))}
+          {Object.values(reserveList).map((list:any,index) => (
+            <div key={index}  >
+                <div>{list.start}</div>
+            </div>
+          ))}
         </div>
       </>
     )

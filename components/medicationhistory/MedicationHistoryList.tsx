@@ -15,10 +15,10 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 export default function MedicationHistoryList(props:any) {
     const {medicalList,fetch} = UseMedicalListRead();
-    const {updata, setUpdata}= useContext(UpdateContext)
+
 useEffect(() => {
   fetch()
-},[updata])
+},[medicalList])
 
 const ExcelDownload = async (e:any) => {
   e.preventDefault();

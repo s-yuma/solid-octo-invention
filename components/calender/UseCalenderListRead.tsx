@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
 import { supabase } from '../../utils/supabaseClient'
 import { useState,useContext } from 'react';
-import { useRouter } from 'next/router';
+
 export const UseCalenderListRead = (props:any) => {
   const [calenderList, setCalenderList] = useState<any>({});
 
   useEffect(() => {
     fetch(props.name)
-    console.log(+"yobi")
   },[])
-
 
   const fetch = async (name:string | string[] | undefined) => {
     console.log(name+"fetc呼出先")

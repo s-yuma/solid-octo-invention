@@ -5,15 +5,18 @@ import { useRouter } from 'next/router';
 
 export const UseRecordRead = () => {
   const [recordList, setRecordList] = useState<any>();
-  // useEffect(() => {
-  //   fetch()
-  // },[updata])
+  const router = useRouter();
+  const name = router.query.name;
+
+  useEffect(() => {
+    fetch(name)
+  },[])
 
   const fetch = async (name:string | string[] | undefined) => {
-    console.log(name+"sese")
+    console.log("名前確認:"+name)
     let {data: list, error } = await supabase
       .from('toilet')
-      .select('title,start')
+      .select('title,start,end')
       .eq("name",name)
       console.log("読み込み")
       console.log(list)
@@ -25,6 +28,5 @@ export const UseRecordRead = () => {
       }
   }
   
-
   return {recordList, fetch};
 }
