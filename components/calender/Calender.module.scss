@@ -1,7 +1,13 @@
 .container {
-    padding: 60px;
-    color: rgb(50, 25, 39);
-    flex: 100%;
+    scale: 0.8;
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+}
+
+.form {
+    margin-top: 10px;
+    display: flex;
 }
 
 .button {
@@ -11,5 +17,217 @@
     &:active {
         background-color: rgb(151, 209, 184);
     }
+}
+
+.day{
+    width: 150px;
+}
+
+.time {
+    width: 100px;
+    background-color:white;
+}
+
+.text{
+    width: 150px;
+    background-color: white;
+}
+
+.calender {
+    margin-top: 10px;
+    font-size: small;
+    
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+    .container {
+        scale: 0.8;
+        width: 100%;
+        background-color: rgb(242, 0, 255);
+        text-align: center;
+    }
+    
+    .form {
+        display: flex;
+    }
+    
+    .button {
+        background-Color: rgb(228, 244, 229);
+        border-Radius: 25%;
+        width: 60px;
+        &:active {
+            background-color: rgb(151, 209, 184);
+        }
+    }
+    
+    .day{
+        width: 150px;
+    }
+    
+    .time {
+        width: 100px;
+        background-color:white;
+    }
+    
+    .text{
+        width: 250px;
+        background-color: white;
+    }
+
+    .calender {
+        margin-top: 10px;
+        font-size: small;
+        
+    }
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+    .container {
+        scale: 0.9;
+        width: 70%;
+        background-color: rgb(230, 200, 195);
+        margin-left: 150px;
+        margin-top: -170px;
+    }
+    
+    .form {
+        display: flex;
+    }
+    
+    .button {
+        background-Color: rgb(228, 244, 229);
+        border-Radius: 25%;
+        width: 60px;
+        &:active {
+            background-color: rgb(151, 209, 184);
+        }
+    }
+    
+    .day{
+        width: 150px;
+    }
+    
+    .time {
+        width: 100px;
+        background-color:white;
+    }
+    
+    .text{
+        width: 250px;
+        background-color: white;
+    }
+    .calender {
+        text-align: center;
+        margin-left: 130px;
+        margin-top: 10px;
+        font-size: small;
+        
+    }
+}
+ 
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .container {
+        scale: 0.9;
+        width: 70%;
+        background-color: rgb(242, 255, 0);
+        margin-left: 250px;
+        margin-top: -150px;
+    }
+    
+    .form {
+        display: flex;
+        position: relative;
+        top: 60px;
+        left: -30px;
+    }
+    
+    .button {
+        background-Color: rgb(228, 244, 229);
+        border-Radius: 25%;
+        width: 60px;
+        &:active {
+            background-color: rgb(151, 209, 184);
+        }
+    }
+    
+    .day{
+        width: 150px;
+    }
+    
+    .time {
+        width: 100px;
+        background-color:white;
+    }
+    
+    .text{
+        width: 250px;
+        background-color: white;
+    }
+
+    .calender {
+        text-align: center;
+        margin-left: 130px;
+        margin-top: 10px;
+        font-size: small;
+        position: absolute;
+        
+    }
+ 
+ 
+}
+ 
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+    .container {
+        scale: 0.9;
+        width: 70%;
+        background-color: rgb(43, 0, 255);
+        margin-left: 120px;
+        margin-top: -160px;
+       
+        
+    }
+    
+    .form {
+        display: flex;
+        position: relative;
+        top: 60px;
+        left: 150px;
+    }
+    
+    .button {
+        background-Color: rgb(228, 244, 229);
+        border-Radius: 25%;
+        width: 60px;
+        &:active {
+            background-color: rgb(151, 209, 184);
+        }
+    }
+    
+    .day{
+        width: 100px;
+    }
+    
+    .time {
+        width: 150px;
+        background-color:white;
+    }
+    
+    .text{
+        width: 300px;
+        background-color: white;
+    }
+    .calender {
+        margin-left: 170px;
+        margin-top: 10px;
+        width: 85%;
+        position: absolute;
+    }
+ 
 }
 

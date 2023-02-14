@@ -88,11 +88,8 @@ export default function RecordInput(props:any){
             const ColorButton1 = styled(Button)<ButtonProps>(({ theme }) => ({
                 color: theme.palette.getContrastText(brown[200]),
                 backgroundColor: brown[100],
-                width: 250,
-                height: 150,
                 borderRadius: 20,
                 marginBottom: 20,
-                fontSize: 100,
                 '&:hover': {
                   backgroundColor: brown[400],
                 },
@@ -101,11 +98,8 @@ export default function RecordInput(props:any){
               const ColorButton2 = styled(Button)<ButtonProps>(({ theme }) => ({
                 color: theme.palette.getContrastText(blue[200]),
                 backgroundColor: blue[100],
-                width: 250,
-                height: 150,
                 borderRadius: 20,
                 marginBottom: 20,
-                fontSize: 100,
                 '&:hover': {
                   backgroundColor: blue[400],
                 },
@@ -113,13 +107,15 @@ export default function RecordInput(props:any){
 
     return(
         <>
-            <div className={styles.main}>
-                <ColorButton1 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time1push}>💩</ColorButton1>
-                <ColorButton2 type="submit" size="large" variant="outlined" style={{"left":"20px","top":"5px"}} onClick={time2push} >💧</ColorButton2>
-                <button className={styles.excel} onClick={(e) => ExcelDownload(e)}>Excel出力</button>
-            </div>
-            <div className={styles.calender}>
-                <RecordCalender name={props.name}/>
+            <div className={styles.container}>
+                <div className={styles.inputButton}>
+                    <button type="submit"  onClick={time1push} className={styles.button}>💩</button>
+                    <button type="submit"  onClick={time2push} className={styles.button}>💧</button>
+                    <button className={styles.excel} onClick={(e) => ExcelDownload(e)}>Excel出力</button>
+                </div>
+                <div className={styles.calender}>
+                    <RecordCalender name={props.name}/>
+                </div>
             </div>
            
         </>

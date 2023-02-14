@@ -48,12 +48,11 @@ export default function Calender(props:any) {
   }
     return(
       <>
-        <div className={style.container} style={{"backgroundColor": "rgb(73,123,158)"}} >
-          <div style={{"display":"flex","justifyContent":"space-between"}}>
+        <div className={style.container} >
             <form onSubmit={pushReserve} id="yoyaku" method='post'>
-              <div style={{"display":"flex","justifyContent":"space-between","width":"550px", "height":"55px","marginLeft":"30px"}}>
-                <input type="date" onChange={event => setYmd(event.target.value) } value={ymd} style={{"flexBasis":"auto"}} required/>
-                <FormControl style={{"backgroundColor":"white","width":"100px"}} >
+              <div className={style.form}>
+                <input type="date" onChange={event => setYmd(event.target.value) } value={ymd} className={style.day} required/>
+                <FormControl className={style.time}>
                   <InputLabel variant="standard" htmlFor="uncontrolled-native">
                     予定時間
                   </InputLabel>
@@ -90,17 +89,17 @@ export default function Calender(props:any) {
                 </Select>
                 </FormControl>
               <div>
-                <TextField id="filled-basic" required label="予定" variant="filled" style={{"backgroundColor":"white"}} value={title} onChange={(event) => {
+                <TextField id="filled-basic" required label="予定" variant="filled" className={style.text} value={title} onChange={(event) => {
                   setTitle(event.target.value)}} />
               </div>
               <button type="submit" className={style.button}>登録</button>
           </div>
             </form>
               </div>
-        <div style={{"backgroundColor": "#ffff","margin":"20px","width":"1200px","paddingRight":"50px","marginLeft":"150px"}}>
+        <div className={style.calender}>
           <CalenderList name={props.name} />
         </div>
-        </div>
+    
       </>
     )
 }

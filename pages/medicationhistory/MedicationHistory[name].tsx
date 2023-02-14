@@ -5,6 +5,7 @@ import MedicationHistoryList from '../../components/medicationhistory/Medication
 import Sidebar from '../../components/sidebar/Sidebar'
 import { useRouter } from 'next/router'
 import styles  from '../../components/medicationhistory/MedicationHistory.module.scss'
+import Header from '../../components/header/Header'
 
 export type FlagContextType = {
   updata: boolean;
@@ -23,10 +24,11 @@ const name = router.query.name;
 
   return (
     <>
-        <div className={styles.container}>
+        <div >
+          <Header/>
           <Sidebar/>
           <MedicationHistoryInput name={name}/>
-          <MedicationHistoryList name={name}/>
+          <MedicationHistoryList name={name}/> 
         </div>   
     </>
   )

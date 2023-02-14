@@ -4,6 +4,9 @@ import Link from "next/link"
 // import HomeCalender from '../components/home/HomeCalender';
 import style from "../components/calender/Calender.module.scss"
 import dynamic from 'next/dynamic';
+import Header from '../components/header/Header';
+
+
 const HomeCalender = dynamic(() => import('../components/home/HomeCalender'), {
     ssr: false
 });
@@ -20,6 +23,7 @@ const Home: NextPage = (props) => {
 
   return (
     <>
+    <Header/>
     <div className={styles.body}>
       <div className={styles.container}>
       {users.map((user) => {

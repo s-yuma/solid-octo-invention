@@ -1,28 +1,44 @@
-.HistoryList {
-    background-color: #72bde3;
-    min-height: 100vh;
-padding-bottom: 20px;
+.title {
+    text-align: center;
+    background-color: aqua;
 }
 
-.container {
-    background-color:#72bde3;
-    height: 100vz;
+.form {
+    text-align: center;
+
 }
 
-.HistoryInput {
-    padding-left: 270px;
-    padding-top: 30px;
-    // background-color:#039BE5;
+.TextBox {
+    width:100%;
+    background-color: white;
+}
+
+.button {
+    width: 300px;
+    background-color: rgb(223, 185, 221);
+}
+
+.accodion {
+    text-align: center;
+    margin-left: 10px;
+    margin-Bottom:10px;
+    min-width: 270px;
 }
 
 .list {
     margin: 20px;
     display: flex;
-    margin-left: 200px;
+}
+
+.ListTitle {
+    display: flex;
+    text-align: center;
+    padding-left: 20px;
+    justify-content: center;
 }
 
 .excel {
-    margin-left: 30px;
+    margin-left: 10px;
     background-color:white;
     color: green;
     border-color: green;
@@ -30,12 +46,243 @@ padding-bottom: 20px;
     margin-top: 15px;
 }
 
-.ListTitle {
-    display: flex;
-    padding-left: 525px;
+.accordionlist {
+    min-width: 300px;
 }
 
-.TextBox {
-    width:500px;
-    background-color: white;
+@media screen and (min-width:480px) and (max-width:599px) { 
+    .title {
+        text-align: center;
+        background-color: aqua;
+    }
+    
+    .form {
+        text-align: center;
+    
+    }
+    
+    .TextBox {
+        width:400px;
+        background-color: white;
+    }
+    
+    .button {
+        width: 400px;
+        background-color: rgb(223, 185, 221);
+    }
+    
+    .accodion {
+        margin-left: 10px;
+        margin-Bottom:10px;
+        min-width: 400px;
+    }
+    
+    .list {
+        margin: 20px;
+        display: flex;
+    }
+    
+    .ListTitle {
+        display: flex;
+        margin-left: 180px;
+    }
+    
+    .excel {
+        margin-left: 30px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        margin-top: 15px;
+    }
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+    .HistoryInput {
+        text-align: center;
+        margin-top: -190px;
+        margin-left: 90px;
+        transform: scale(0.9);
+    }
+
+    .title {
+        text-align: center;
+        background-color: rgb(0, 255, 94);
+    }
+    
+    .form {
+        text-align: center;
+    
+    }
+    
+    .TextBox {
+        width:580px;
+        background-color: white;
+    }
+    
+    .button {
+        width: 580px;
+        background-color: rgb(223, 185, 221);
+    }
+    
+    .accodion {
+        margin-left: 150px;
+        margin-Bottom:10px;
+        min-width: 500px;
+    }
+
+    .accordionlist {
+        margin-left: 300px;
+        text-align: left;
+    }
+    
+    .list {
+        margin: 20px;
+        display: flex;
+    }
+    
+    .ListTitle {
+        display: flex;
+        margin-left: 180px;
+    }
+    
+    .excel {
+        margin-left: 30px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        margin-top: 15px;
+    }
+ 
+}
+ 
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .HistoryInput {
+        text-align: center;
+        margin-top: -190px;
+        margin-left: 90px;
+        transform: scale(0.9);
+    }
+
+    .title {
+        text-align: center;
+        background-color: rgb(0, 166, 255);
+    }
+    
+    .form {
+        text-align: center;
+        display: flex;
+    }
+    
+    .TextBox {
+        width:470px;
+        background-color: white;
+    }
+    
+    .button {
+        width: 80px;
+        height: 50px;
+        background-color: rgb(223, 185, 221);
+    }
+    
+    .accodion {
+        margin-left: 110px;
+        margin-Bottom:10px;
+        min-width: 800px;
+    }
+    
+
+    .accordionlist {
+        margin-left: 300px;
+        text-align: left;
+    }
+
+    .list {
+        margin: 20px;
+        display: flex;
+    }
+    
+    .ListTitle {
+        display: flex;
+        margin-left: 180px;
+    }
+    
+    .excel {
+        margin-left: 30px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        margin-top: 15px;
+    }
+ 
+}
+ 
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+    .HistoryInput {
+        text-align: center;
+        margin-top: -190px;
+        margin-left: 90px;
+        transform: scale(0.9);
+    }
+
+    .title {
+        text-align: center;
+        background-color: rgb(0, 255, 213);
+    }
+    
+    .form {
+        text-align: center;
+        display: flex;
+    }
+    
+    .TextBox {
+        width: auto;
+        width:630px;
+        background-color: white;
+    }
+    
+    .button {
+        width: 80px;
+        height: 55px;
+        background-color: rgb(223, 185, 221);
+    }
+    
+    .accodion {
+        margin-left: 140px;
+        margin-Bottom:10px;
+        min-width: 1200px;
+    }
+    
+    .accordionlist {
+        margin-left: 300px;
+        text-align: left;
+    }
+    
+    .list {
+        margin: 20px;
+        display: flex;
+    }
+    
+    .ListTitle {
+        display: flex;
+        margin-left: 180px;
+    }
+    
+    .excel {
+        margin-left: 30px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        margin-top: 15px;
+    }
+ 
 }

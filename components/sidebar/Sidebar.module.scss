@@ -1,0 +1,295 @@
+
+
+
+// @media screen and (max-width: 320px) {
+//   .main {
+//     display: flex;
+//     list-style: none;
+//     width: 100%;
+//     margin-top: -10px;
+//     transform: scale(0.8);
+//     margin-left:-15px;
+//     justify-content: center;
+//   }
+
+//   .button {
+//     width: 90px;
+//     margin-top: 10px;
+//     background-color: rgb(87, 225, 200);
+//     color: white;
+//     border-radius: 20%;
+//     border-color: white;
+//     border-style: solid;
+//     border-width: 3px;
+//     &:hover {
+//       background-color: white;
+//       color: rgb(87, 225, 200);
+//       border-color: rgb(87, 225, 200);
+//       border-style: solid;
+//       border-width: 3px;
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 375px) {
+//   .main {
+//     display: flex;
+//     list-style: none;
+//     background-color: rgb(255, 0, 111);
+//     width: 100%;
+//     margin-top: -10px;
+//     transform: scale(0.9);
+//     margin-left: -30px;
+//     justify-content: center;
+//   }
+
+//   .button {
+//     width: 100%;
+//     margin-top: 10px;
+//     margin-left: 15px;
+//     background-color: rgb(87, 225, 200);
+//     color: white;
+//     border-radius: 20%;
+//     border-color: white;
+//     border-style: solid;
+//     border-width: 3px;
+//     &:hover {
+//       background-color: white;
+//       color: rgb(87, 225, 200);
+//       border-color: rgb(87, 225, 200);
+//       border-style: solid;
+//       border-width: 3px;
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 768px) {
+//   .main {
+
+//     display: block;
+//     background-color: rgb(0, 0, 0);
+//     width: 160px;
+//   }
+
+//   .button {
+//     margin-top: 10px;
+//     margin-left: -60px;
+//     width: 200px;
+//     background-color: rgb(87, 225, 200);
+//     border-radius: 20%;
+//     border-style: solid;
+//     border-width: 3px;
+//     &:hover {
+//       background-color: white;
+//       color: rgb(87, 225, 200);
+//       border-color: rgb(87, 225, 200);
+//       border-style: solid;
+//       border-width: 3px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1024px) {
+//   .main {
+
+//     display: block;
+//     background-color: rgba(164, 20, 20, 0.467);
+//     width: 160px;
+//   }
+
+//   .button {
+//     margin-top: 10px;
+//     margin-left: -60px;
+//     width: 200px;
+//     background-color: rgb(87, 225, 200);
+//     border-radius: 20%;
+//     border-style: solid;
+//     border-width: 3px;
+//     &:hover {
+//       background-color: white;
+//       color: rgb(87, 225, 200);
+//       border-color: rgb(87, 225, 200);
+//       border-style: solid;
+//       border-width: 3px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 2560px) {
+//   .main {
+
+//     display: block;
+//     background-color: rgb(202, 25, 25);
+//     width: 160px;
+//   }
+
+//   .button {
+//     margin-top: 10px;
+//     margin-left: -60px;
+//     width: 200px;
+//     background-color: rgb(87, 225, 200);
+//     border-radius: 20%;
+//     border-style: solid;
+//     border-width: 3px;
+//     &:hover {
+//       background-color: white;
+//       color: rgb(87, 225, 200);
+//       border-color: rgb(87, 225, 200);
+//       border-style: solid;
+//       border-width: 3px;
+//     }
+//   }
+// }
+
+.main {
+  margin-top: 0px;
+  background-color: rgb(0, 102, 255);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-shrink: 0; 
+}
+
+.button {
+  transform: scale(0.7);
+  background-color: rgb(87, 225, 200);
+  color: white;
+  border-radius: 20%;
+  border-color: white;
+  border-style: solid;
+  border-width: 3px;
+  &:hover {
+    background-color: white;
+    color: rgb(87, 225, 200);
+    border-color: rgb(87, 225, 200);
+    border-style: solid;
+    border-width: 3px;
+  }
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+  .main {
+   
+    margin-top: 0px;
+    background-color: rgb(255, 162, 0);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-shrink: 0; 
+  }
+  
+  .button {
+    width: 90px;
+    transform: scale(0.8);
+    background-color: rgb(87, 94, 225);
+    color: white;
+    border-radius: 20%;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    &:hover {
+      background-color: white;
+      color: rgb(87, 225, 200);
+      border-color: rgb(87, 225, 200);
+      border-style: solid;
+      border-width: 3px;
+    }
+  }
+ 
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+  .main {
+    display:flex;
+    flex-flow: column;
+    margin-top: 0px;
+    background-color: rgb(255, 0, 106);
+    width: 10%;
+  }
+  
+  .button {
+    width: 90px;
+    transform: scale(0.8);
+    background-color: rgb(87, 94, 225);
+    color: white;
+    border-radius: 20%;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    &:hover {
+      background-color: white;
+      color: rgb(87, 225, 200);
+      border-color: rgb(87, 225, 200);
+      border-style: solid;
+      border-width: 3px;
+    }
+  }
+ 
+}
+ 
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+  .main {
+    display:flex;
+    flex-flow: column;
+    margin-top: 0px;
+    background-color: rgb(221, 255, 0);
+    width: 10%;
+  }
+  
+  .button {
+    width: 90px;
+    transform: scale(0.8);
+    background-color: rgb(87, 94, 225);
+    color: white;
+    border-radius: 20%;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    &:hover {
+      background-color: white;
+      color: rgb(87, 225, 200);
+      border-color: rgb(87, 225, 200);
+      border-style: solid;
+      border-width: 3px;
+    }
+  }
+ 
+}
+ 
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+  .main {
+    display:flex;
+    flex-flow: column;
+    margin-top: 0px;
+    background-color: rgb(255, 191, 0);
+    width: 7%;
+  }
+  
+  .button {
+    width: 90px;
+    transform: scale(0.8);
+    background-color: rgb(87, 94, 225);
+    color: white;
+    border-radius: 20%;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    &:hover {
+      background-color: white;
+      color: rgb(87, 225, 200);
+      border-color: rgb(87, 225, 200);
+      border-style: solid;
+      border-width: 3px;
+    }
+  }
+ 
+}
+

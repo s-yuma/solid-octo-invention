@@ -22,14 +22,14 @@ export default function CalenderList(props:any) {
       },[calenderList])
   return (
     <>
-      <div style={{"paddingLeft":"50px","margin":"0",}}>
         <FullCalendar  
-        plugins={[dayGridPlugin, interactionPlugin]}        
-        locale='ja'  
-        // initialEvents={[{ title: '現在の日時', start: new Date() }]} //現在の日時を表示
-        events={calenderList}
+          plugins={[dayGridPlugin, interactionPlugin]}        
+          locale='ja'  
+          // initialEvents={[{ title: '現在の日時', start: new Date() }]} //現在の日時を表示
+          events={calenderList}
+          contentHeight={'auto'}
         />
-      </div>
+ 
     </>
   )
 }

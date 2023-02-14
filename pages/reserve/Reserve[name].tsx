@@ -2,6 +2,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import React, { FC, createContext,useState } from 'react'
 import { useRouter } from "next/router";
 import dynamic from 'next/dynamic';
+import Header from "../../components/header/Header";
 const Calender = dynamic(() => import('../../components/calender/Calender'), {
     ssr: false
 });
@@ -22,8 +23,9 @@ export default function Reserve() {
 
   return (
     <>
+        <Header/>
         <Sidebar /> 
         <Calender name={name} />
-    </>
+  </>
   );
 }

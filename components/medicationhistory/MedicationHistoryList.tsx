@@ -77,7 +77,7 @@ const Update = async (e:any,id:string) => {
         </div>
             {Object.values(medicalList).map((list:any,index) => (
                 <div key={index} className={styles.list} >
-               <Accordion style={{"marginLeft":"70px","marginBottom":"10px","width":"1000px"}}>
+               <Accordion className={styles.accodion}>
                 {list.end ? (
                   <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -85,7 +85,7 @@ const Update = async (e:any,id:string) => {
                   id="panel1a-header"
                   style={{"backgroundColor":"gray"}}
                 >
-                    <Typography style={{"textAlign":"left"}}><div >{list.diseasename}</div></Typography>
+                    <Typography><div >{list.diseasename}</div></Typography>
                 </AccordionSummary>
                   ): (
                     <AccordionSummary
@@ -94,12 +94,12 @@ const Update = async (e:any,id:string) => {
                     id="panel1a-header"
                     style={{"backgroundColor":"white"}}
                   >
-                      <Typography style={{"textAlign":"left"}}><div >{list.diseasename}</div></Typography>
+                      <Typography><div >{list.diseasename}</div></Typography>
                   </AccordionSummary>
                   )}
                 
-        <AccordionDetails>
-          <Typography>
+        <AccordionDetails >
+          <Typography className={styles.accordionlist}>
           {list.medicine}
           </Typography>
         </AccordionDetails>

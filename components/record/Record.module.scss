@@ -1,41 +1,50 @@
-.main {
-    display:flex;
-    flex-flow: column;
-    padding: 30px;
-    margin-top: -10px;
+.inputButton {
+    margin-top: 0px;
+    background-color: rgb(255, 162, 0);
+    display: flex;
 }
 
-.button1 {
-    width: 250px;
-    height: 150px;
-    background-color: rgb(186, 223, 234);
-    font-size: 100px;
+.button {
+    width: 100px;
+    height: 50px;
     border-radius: 20%;
-    margin-bottom: 30PX;
+    margin-left: 10px;
+    background-color: aquamarine;
+    color: #ffff;
     &:hover {
-        border-radius: 20%;
-        border-color:  rgb(225, 225, 58);
-        
+        background-color: white;
     }
 }
 
-.button2 {
+.excel {
+    margin-left: 20px;
+    background-color:white;
+    color: green;
+    border-color: green;
+    height: 30px;
+    width: 100px;
+    margin-top: 8px;
+}
+
+.calender {
+    font-size: small;
+    scale: 0.9;
+    background-Color: #ffff;
+    // margin-left: 10px;
+    // margin-top: 50px;
+    // width: 500px;
+}
+@media screen and (min-width: 767px) {
+    .inputButton {
+    position: relative;
+
+        display:flex;
+        margin-left: 600px;
+        top: -250px;
+    }
+.button {
+    background-color: aquamarine;
     
-    width: 250px;
-    height: 150px;
-    background-color: rgb(186, 223, 234);
-    font-size: 100px;
-    border-radius: 20%;
-    &:hover {
-        color: rgb(215, 215, 101);
-        border-radius: 20%;
-        border-color:  rgb(231, 64, 120);
-    }
-}
-
-.conteiner {
-    background-color:#d7b5c7;
-    min-height: 789px
 }
 
 .excel {
@@ -49,9 +58,212 @@
 
 .calender {
     background-Color: #ffff;
-    margin: 20px;
     width: 1200px;
-    padding-Right: 50px;
-    margin-Left: 50px;
-    padding: 20px;
+    left: 100px;
+    padding: 50px;
+    margin-top: -350px;
+    margin-left: 400px;
+    height: 100vh;
+}
+.container {
+    position: absolute;
+}
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+    .inputButton {
+        margin-top: 0px;
+        background-color: rgb(0, 255, 21);
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    .button {
+        width: 100px;
+        height: 50px;
+        border-radius: 20%;
+        margin-left: 10px;
+        background-color: aquamarine;
+        color: #ffff;
+        &:hover {
+            background-color: white;
+        }
+    }
+    
+    .excel {
+        margin-left: 20px;
+        background-color:white;
+        color: green;
+        border-color: green;
+        height: 30px;
+        width: 100px;
+        margin-top: 8px;
+    }
+    
+    .calender {
+        font-size: small;
+        scale: 0.9;
+        background-Color: #ffff;
+        // margin-left: 10px;
+        // margin-top: 50px;
+        // width: 500px;
+    }
+    @media screen and (min-width: 767px) {
+        .inputButton {
+        position: relative;
+    
+            display:flex;
+            margin-left: 600px;
+            top: -250px;
+        }
+    .button {
+        background-color: aquamarine;
+        
+    }
+    
+    .excel {
+            margin-left: 30px;
+            background-color:white;
+            color: green;
+            border-color: green;
+            height: 30px;
+            margin-top: 15px;
+    }
+    
+    .calender {
+        background-Color: #ffff;
+        width: 1200px;
+        left: 100px;
+        padding: 50px;
+        margin-top: -350px;
+        margin-left: 400px;
+        height: 100vh;
+    }
+    .container {
+        position: absolute;
+    }
+    }
+ 
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+    .inputButton {
+        position: relative;
+            background-color: rgba(235, 136, 6, 0.942);
+            display:flex;
+            margin-left: 170px;
+            top: -160px;
+            z-index: 1;
+            scale: 0.7;
+            width: 50%;
+        }
+    .button {
+        background-color: aquamarine;
+        font-size: 40px;
+    }
+    
+    .excel {
+            margin-left: 30px;
+            background-color:white;
+            color: green;
+            border-color: green;
+            height: 30px;
+            width: 150px;
+            margin-top: 15px;
+    }
+    
+    .calender {
+        background-Color: #ffff;
+        width: 580px;
+        margin-top: -230px;
+        margin-left: 70px;
+        height: 100vh;
+        position: relative;
+        position: absolute;
+    }
+    .container {
+        position: absolute;
+    }
+ 
+}
+ 
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .inputButton {
+        margin-top: 0px;
+        background-color: rgb(4, 255, 0);
+        flex-flow: column;
+        margin-left: 100px;
+        margin-top: 100px;
+        }
+    .button {
+        background-color: rgb(127, 127, 255);
+        font-size: 40px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .excel {
+            margin-left: 10px;
+            background-color:white;
+            color: green;
+            border-color: green;
+            height: 30px;
+            top: 20px;
+    }
+    
+    .calender {
+        width: 850px;
+        padding: 10px;
+        background-Color: #ffff;
+        margin-top: -200px;
+        margin-left: 0;
+    }
+    .container {
+        display: flex;
+    }
+ 
+}
+ 
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+    .inputButton {
+        width: 200px;
+        margin-top: 0px;
+        background-color: rgb(255, 81, 0);
+        flex-flow: column;
+        margin-left: 150px;
+        margin-top: 110px;
+        }
+    .button {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(127, 127, 255);
+        font-size: 40px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .excel {
+            width: 120px;
+            background-color:white;
+            color: green;
+            border-color: green;
+            height: 30px;
+    }
+    
+    .calender {
+       
+        background-Color: #ffff;
+        margin-top: -190px;
+        margin-left: -10px;
+    }
+    .container {
+        display: flex;
+    }
+ 
 }
