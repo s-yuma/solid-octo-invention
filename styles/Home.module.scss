@@ -1,7 +1,12 @@
 .container {
+  flex-wrap: wrap;
+  text-align: center;
   display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
+  justify-content:flex-start;
+  margin-top: 10px;
+  margin-left: 10%;
+  font-size: small;
+
 }
 
 .btn_m1 .btn_m2 {
@@ -156,3 +161,191 @@
   }
 }
 
+@media screen and (min-width:960px) and (max-width:1279px) {
+  .container {
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    justify-content:flex-start;
+    margin-top: 10px;
+    font-size: small;
+  
+  }
+  
+  .btn_m1 .btn_m2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #e498e7;
+    border-radius: 8px;
+    border-bottom: solid 5px #de1dd8;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #de1dd8;
+    transform: translateY(3px);
+    }
+  }
+  .btn_f1 .btn_f2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    border-radius: 8px;
+    border-bottom: solid 5px #1d7fde;
+    text-decoration: none;
+    &:hover {
+    border-bottom: solid 2px #1d7fde;
+    transform: translateY(3px);
+    }
+  }
+  
+  .btn_s1 .btn_s2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #e692a5;
+    border-radius: 8px;
+    border-bottom: solid 5px #de1dae;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #de1dae;
+    transform: translateY(3px);
+    }
+  }
+  
+  .btn_b1 .btn_b2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #98e6bd;
+    border-radius: 8px;
+    border-bottom: solid 5px #7de38c;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #7de38c;
+    transform: translateY(3px);
+    }
+  }
+  
+  .btn_gf1 .btn_gf2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #94d2e2;
+    border-radius: 8px;
+    border-bottom: solid 5px #51cae9;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #51cae9;
+    transform: translateY(3px);
+    }
+  }
+  
+  .btn_gm1 .btn_gm2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #cb94dc;
+    border-radius: 8px;
+    border-bottom: solid 5px #b94dda;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #b94dda;
+    transform: translateY(3px);
+    }
+  }
+  
+  .btn_d1 .btn_d2 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #e69d9d;
+    border-radius: 8px;
+    border-bottom: solid 5px #e14242;
+    text-decoration: none;
+  
+  &:hover {
+    border-bottom: solid 2px #e14242;
+    transform: translateY(3px);
+    }
+  }
+ 
+ 
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+ 
+ 
+}
+ 
+ 
+/* 480px〜599px：SP横
+------------------------------ */
+@media screen and (min-width:480px) and (max-width:599px) { 
+ 
+ 
+}
+ 
+ 
+/* 〜479px：スマートフォン縦
+------------------------------ */
+@media screen and (max-width:479px) { 
+ 
+ 
+}

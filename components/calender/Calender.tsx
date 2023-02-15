@@ -22,7 +22,7 @@ export default function Calender(props:any) {
     fetch(props.name)
   console.log(props.name+"useEfect")
 
-  },[calenderList])
+  },[])
 
   const pushReserve = async (e:any)=> {
     e.preventDefault();

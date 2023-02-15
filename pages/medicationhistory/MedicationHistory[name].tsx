@@ -26,7 +26,6 @@ const name = router.query.name;
     <>
         <div >
           <Header/>
-          <Sidebar/>
           <MedicationHistoryInput name={name}/>
           <MedicationHistoryList name={name}/> 
         </div>   

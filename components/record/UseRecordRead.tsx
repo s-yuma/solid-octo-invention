@@ -10,7 +10,7 @@ export const UseRecordRead = () => {
 
   useEffect(() => {
     fetch(name)
-  },[])
+  },[recordList])
 
   const fetch = async (name:string | string[] | undefined) => {
     console.log("名前確認:"+name)

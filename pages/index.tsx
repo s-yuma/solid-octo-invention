@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.scss'
 import Link from "next/link"
 // import HomeCalender from '../components/home/HomeCalender';
-import style from "../components/calender/Calender.module.scss"
 import dynamic from 'next/dynamic';
-import Header from '../components/header/Header';
+import Header from '../components/header/HomeHeader';
+import HomeHeader from '../components/header/HomeHeader';
 
 
 const HomeCalender = dynamic(() => import('../components/home/HomeCalender'), {
@@ -23,7 +23,7 @@ const Home: NextPage = (props) => {
 
   return (
     <>
-    <Header/>
+    <HomeHeader/>
     <div className={styles.body}>
       <div className={styles.container}>
       {users.map((user) => {
@@ -36,9 +36,7 @@ const Home: NextPage = (props) => {
         );
       })}
       </div>
-      <div className={style.container}>
         <HomeCalender />
-      </div>
       </div>
     </>
         

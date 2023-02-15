@@ -21,9 +21,7 @@ export default function Record(props:any) {
         <>
             <div className={style.conteiner}>
                 <Header/>
-                <Sidebar/>
                 <RecordInput name={name}/>
-                
             </div>
         </>
     )

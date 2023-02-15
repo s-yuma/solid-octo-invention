@@ -1,4 +1,3 @@
-
 import { useState , useContext} from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -27,6 +26,8 @@ export default function RecordCalender(props:any) {
         locale='ja'  
         // initialEvents={[{ title: '現在の日時', start: new Date() }]} //現在の日時を表示
         events={recordList}
+        contentHeight={'auto'}
+
         />
     </>
   )

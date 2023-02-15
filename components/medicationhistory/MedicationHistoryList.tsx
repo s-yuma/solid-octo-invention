@@ -70,7 +70,7 @@ const Update = async (e:any,id:string) => {
 
   return (
     <>
-    <div className={styles.HistoryList}>
+    <div>
         <div className={styles.ListTitle}>
           <h3>◆薬歴リスト◆</h3>
           <button className={styles.excel} onClick={(e) => ExcelDownload(e)}>Excel出力</button>

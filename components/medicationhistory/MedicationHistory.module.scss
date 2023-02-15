@@ -1,31 +1,42 @@
-.title {
-    text-align: center;
-    background-color: aqua;
-}
+@media screen and (max-width:480px) { 
+    .HistoryInput {
+        margin-right: 70px;
+        transform: scale(0.9);
 
-.form {
-    text-align: center;
-
-}
-
-.TextBox {
-    width:100%;
-    background-color: white;
-}
-
-.button {
-    width: 300px;
-    background-color: rgb(223, 185, 221);
-}
+    }
+    .title {
+        text-align: center;
+        background-color: aqua;
+    }
+    
+    .form {
+        text-align: center;
+    
+    }
+    
+    .TextBox {
+        width:87vw;
+        background-color: white;
+    }
+    
+    .button {
+        width: 40vw;
+        height: 30px;
+        background-color: rgb(223, 185, 221);
+    }
 
 .accodion {
-    text-align: center;
-    margin-left: 10px;
-    margin-Bottom:10px;
-    min-width: 270px;
+    width: 60vw;
+}
+
+.accordionlist {
+    text-align: left;
+    word-wrap:break-word;
 }
 
 .list {
+    padding-left: 20px;
+    width: auto;
     margin: 20px;
     display: flex;
 }
@@ -46,11 +57,15 @@
     margin-top: 15px;
 }
 
-.accordionlist {
-    min-width: 300px;
+
+
 }
 
 @media screen and (min-width:480px) and (max-width:599px) { 
+    .HistoryInput {
+        text-align: center;
+        transform: scale(0.9);
+    }
     .title {
         text-align: center;
         background-color: aqua;
@@ -62,23 +77,29 @@
     }
     
     .TextBox {
-        width:400px;
+        width:80vw;
         background-color: white;
     }
     
     .button {
-        width: 400px;
+        width: 40vw;
+        height: 30px;
         background-color: rgb(223, 185, 221);
     }
     
     .accodion {
-        margin-left: 10px;
-        margin-Bottom:10px;
-        min-width: 400px;
+        width: 100vw;
+    }
+    
+    .accordionlist {
+        text-align: left;
+        word-wrap:break-word;
     }
     
     .list {
-        margin: 20px;
+        padding-left: 30px;
+        width: auto;
+        margin: 0px;
         display: flex;
     }
     
@@ -102,13 +123,11 @@
 @media screen and (min-width:600px) and (max-width:959px) {
     .HistoryInput {
         text-align: center;
-        margin-top: -190px;
-        margin-left: 90px;
         transform: scale(0.9);
     }
 
     .title {
-        text-align: center;
+        margin-right: 15vw;
         background-color: rgb(0, 255, 94);
     }
     
@@ -118,33 +137,37 @@
     }
     
     .TextBox {
-        width:580px;
+        right: 7.5vw;
+        width:44vw;
         background-color: white;
     }
     
     .button {
-        width: 580px;
-        background-color: rgb(223, 185, 221);
+        width: 40vw;
+        height: 50px;
+        margin-right: 20vh;
+        background-color: rgb(185, 190, 223);
     }
     
     .accodion {
-        margin-left: 150px;
-        margin-Bottom:10px;
-        min-width: 500px;
+        width: 75vw;
     }
-
+    
     .accordionlist {
-        margin-left: 300px;
         text-align: left;
+        word-wrap:break-word;
     }
     
     .list {
+        padding-left: 20px;
+        width: auto;
         margin: 20px;
         display: flex;
     }
     
     .ListTitle {
         display: flex;
+        justify-content: center;
         margin-left: 180px;
     }
     
@@ -156,7 +179,6 @@
         height: 30px;
         margin-top: 15px;
     }
- 
 }
  
 /* 960px〜1279px：小型PC
@@ -164,13 +186,11 @@
 @media screen and (min-width:960px) and (max-width:1279px) {
     .HistoryInput {
         text-align: center;
-        margin-top: -190px;
-        margin-left: 90px;
         transform: scale(0.9);
     }
 
     .title {
-        text-align: center;
+        width: 90vw;
         background-color: rgb(0, 166, 255);
     }
     
@@ -180,36 +200,36 @@
     }
     
     .TextBox {
-        width:470px;
+        width:40vw;
         background-color: white;
     }
     
     .button {
         width: 80px;
-        height: 50px;
+        height: 55px;
         background-color: rgb(223, 185, 221);
     }
     
     .accodion {
-        margin-left: 110px;
-        margin-Bottom:10px;
-        min-width: 800px;
+        width: 73vw;
     }
     
-
     .accordionlist {
-        margin-left: 300px;
         text-align: left;
+        word-wrap:break-word;
     }
-
+    
     .list {
+        padding-left: 50px;
+        width: auto;
         margin: 20px;
         display: flex;
     }
     
     .ListTitle {
         display: flex;
-        margin-left: 180px;
+        justify-content: center;
+        margin-left: 40px;
     }
     
     .excel {
@@ -228,24 +248,22 @@
 @media screen and (min-width:1280px) {
     .HistoryInput {
         text-align: center;
-        margin-top: -190px;
-        margin-left: 90px;
         transform: scale(0.9);
     }
 
     .title {
+        width: 95vw;
         text-align: center;
         background-color: rgb(0, 255, 213);
     }
     
     .form {
-        text-align: center;
+        width: 100vw;
         display: flex;
     }
     
     .TextBox {
-        width: auto;
-        width:630px;
+        width:41vw;
         background-color: white;
     }
     
@@ -256,24 +274,24 @@
     }
     
     .accodion {
-        margin-left: 140px;
-        margin-Bottom:10px;
-        min-width: 1200px;
+        width: 75vw;
     }
     
     .accordionlist {
-        margin-left: 300px;
         text-align: left;
+        word-wrap:break-word;
     }
     
     .list {
+        padding-left: 50px;
+        width: auto;
         margin: 20px;
         display: flex;
     }
     
     .ListTitle {
+        justify-content: center;
         display: flex;
-        margin-left: 180px;
     }
     
     .excel {

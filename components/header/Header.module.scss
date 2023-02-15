@@ -1,56 +1,148 @@
+$color: #13ab64;
+@media screen and (max-width:480px) {
 .header {
+    display: flex;
     padding-left: 20px;
-    width: 100%;
+    width: 100vw;
     height: 40px;
-    background-color: red;
+    background-color:  #13ab64;
     padding-top: 10px;
+    
+}
+
+.title {
+    color:aliceblue;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main {
+    margin-top: -9px;
+    margin-left: 40px;
+    scale: 0.8;
+}
+
+.button {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 }
 @media screen and (min-width:480px) and (max-width:599px) { 
     .header {
+        display: flex;
         padding-left: 20px;
-        width: 100%;
+        width: 100vw;
         height: 40px;
-        background-color: red;
+        background-color:  #13ab64;
         padding-top: 10px;
+        
     }
- 
-}
- 
+    
+    .title {
+        color:aliceblue;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .main {
+        margin-top: -9px;
+        margin-left: 240px;
+        scale: 0.98;
+    }
+    
+    .button {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    
+    }
 /* 600px〜959px：タブレット
 ------------------------------ */
 @media screen and (min-width:600px) and (max-width:959px) {
     .header {
+        display: flex;
         padding-left: 20px;
-        width: 100%;
+        width: 100vw;
         height: 40px;
-        background-color: red;
+        background-color:  #13ab64;
         padding-top: 10px;
+        
     }
- 
-}
+    
+    .title {
+        color:aliceblue;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .main {
+        margin-top: -9px;
+        margin-left: 440px;
+    }
+    
+    .button {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    
+    }
  
 /* 960px〜1279px：小型PC
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
     .header {
+        display: flex;
         padding-left: 20px;
-        width: 100%;
+        width: 100vw;
         height: 40px;
-        background-color: red;
+        background-color:  #13ab64;
         padding-top: 10px;
+        
     }
- 
+    
+    .title {
+        color:aliceblue;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .main {
+        width: 100%;
+        margin-top: -9px;
+        padding-left: 58vw;
+    }
+    
+    .button {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    
 }
  
 /* 1280px〜：大型PC
 ------------------------------ */
 @media screen and (min-width:1280px) {
-     .header {
+    .header {
+        display: flex;
         padding-left: 20px;
-        width: 100%;
+        width: 100vw;
         height: 40px;
-        background-color: red;
+        background-color:  #13ab64;
         padding-top: 10px;
+        
     }
- 
+    
+    .title {
+        color:aliceblue;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    .main {
+        width: 100%;
+        margin-top: -9px;
+        padding-left: 62vw;
+    }
+    
+    .button {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    
 }

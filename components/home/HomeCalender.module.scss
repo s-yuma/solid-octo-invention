@@ -1,0 +1,61 @@
+.calender {
+    margin-top: 20px;
+    font-size: small;
+    
+}
+
+@media screen and (min-width:480px) and (max-width:599px) { 
+    .calender {
+        margin-top: 10px;
+        font-size: small;
+        
+    }
+}
+ 
+/* 600px〜959px：タブレット
+------------------------------ */
+@media screen and (min-width:600px) and (max-width:959px) {
+    .calender {
+        text-align: center;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 10px;
+        font-size: small;
+        width: 83%;
+    }
+}
+ 
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .calender {
+        text-align: center;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 30px;
+        font-size: small;
+        width: 83%;
+    }
+
+ 
+}
+ 
+/* 1280px〜：大型PC
+------------------------------ */
+@media screen and (min-width:1280px) {
+    .calender {
+        text-align: center;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 30px;
+        font-size: small;
+        width: 83%;
+        animation: 20s linear infinite rotation;
+    }
+    @keyframes rotation{
+        0%{ transform:rotate(0);}
+        100%{ transform:rotate(360deg); }
+    }
+ 
+}
+

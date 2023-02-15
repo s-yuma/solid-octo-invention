@@ -85,25 +85,6 @@ export default function RecordInput(props:any){
             fetch(props.name);
             }
 
-            const ColorButton1 = styled(Button)<ButtonProps>(({ theme }) => ({
-                color: theme.palette.getContrastText(brown[200]),
-                backgroundColor: brown[100],
-                borderRadius: 20,
-                marginBottom: 20,
-                '&:hover': {
-                  backgroundColor: brown[400],
-                },
-              }));
-
-              const ColorButton2 = styled(Button)<ButtonProps>(({ theme }) => ({
-                color: theme.palette.getContrastText(blue[200]),
-                backgroundColor: blue[100],
-                borderRadius: 20,
-                marginBottom: 20,
-                '&:hover': {
-                  backgroundColor: blue[400],
-                },
-              }));
 
     return(
         <>
