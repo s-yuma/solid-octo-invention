@@ -23,7 +23,12 @@ export default function HomeCalender() {
         
                 events={calenderList}
                 contentHeight={'auto'}
-
+                eventClick={
+                  function (args) {
+                    alert(args.event.title)
+                  }
+                }
+                
             />
       </div>
         </>

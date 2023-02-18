@@ -1,32 +1,42 @@
+$color: #eebc1a;
+
 @media screen and (max-width:480px) { 
     .HistoryInput {
-        margin-right: 70px;
         transform: scale(0.9);
-
+        text-align: center;
+        
     }
     .title {
-        text-align: center;
-        background-color: aqua;
+        font-family: "VL Pゴシック","VL PGothic";
+        margin-right: 5vw;
     }
     
     .form {
         text-align: center;
-    
     }
     
     .TextBox {
         width:87vw;
         background-color: white;
+        margin-right: 25vw;
+
     }
     
     .button {
+        font-family: "VL Pゴシック","VL PGothic";
+        margin-right: 10vw;
         width: 40vw;
         height: 30px;
-        background-color: rgb(223, 185, 221);
+        background-color: $color;
+        border: gray 2px solid;
+        &:hover {
+            background-color: gray;
+            border: $color 2px solid; 
+        }
     }
 
 .accodion {
-    width: 60vw;
+    width: 65vw;
 }
 
 .accordionlist {
@@ -37,18 +47,19 @@
 .list {
     padding-left: 20px;
     width: auto;
-    margin: 20px;
+    margin: 5px;
+    margin-top: -7px;
     display: flex;
 }
 
 .ListTitle {
     display: flex;
     text-align: center;
-    padding-left: 20px;
     justify-content: center;
 }
 
 .excel {
+    display: none;
     margin-left: 10px;
     background-color:white;
     color: green;

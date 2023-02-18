@@ -1,7 +1,7 @@
 .calender {
     margin-top: 20px;
-    font-size: small;
-    
+    font-size: 15px;
+    padding: 15px;
 }
 
 @media screen and (min-width:480px) and (max-width:599px) { 
@@ -50,7 +50,7 @@
         margin-top: 30px;
         font-size: small;
         width: 83%;
-        animation: 20s linear infinite rotation;
+        // animation: 20s linear infinite rotation;
     }
     @keyframes rotation{
         0%{ transform:rotate(0);}

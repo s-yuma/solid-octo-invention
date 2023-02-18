@@ -5,6 +5,7 @@ import Link from "next/link"
 import dynamic from 'next/dynamic';
 import Header from '../components/header/HomeHeader';
 import HomeHeader from '../components/header/HomeHeader';
+import style from "../components//home//HomeCalender.module.scss"
 
 
 const HomeCalender = dynamic(() => import('../components/home/HomeCalender'), {
@@ -23,20 +24,31 @@ const Home: NextPage = (props) => {
 
   return (
     <>
-    <HomeHeader/>
+    <Header/>
     <div className={styles.body}>
       <div className={styles.container}>
+
+
+     
       {users.map((user) => {
         return (
-          <div className={user.style1} key={user.name}>
-            <Link href={{ pathname: `/record/Record[name]`, query: {name: user.name} }}  className={user.style2} >
+          
+          <div className={`${user.style1} ${styles.slide}`} key={user.name}>
+            <Link href={{ pathname: `/record/Record[name]`, query: {name: user.name} }}  className={`${user.style2} ${styles.slide}`} >
               {user.name}
             </Link>
           </div>
+      
+          
         );
+        
       })}
+        
+
       </div>
+      <div className={style.container}>
         <HomeCalender />
+      </div>
       </div>
     </>
         

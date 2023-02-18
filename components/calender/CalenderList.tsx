@@ -20,6 +20,8 @@ export default function CalenderList(props:any) {
     useEffect(() => {
         fetch(props.name)
       },[calenderList])
+
+    
   return (
     <>
         <FullCalendar  
@@ -28,6 +30,11 @@ export default function CalenderList(props:any) {
           // initialEvents={[{ title: '現在の日時', start: new Date() }]} //現在の日時を表示
           events={calenderList}
           contentHeight={'auto'}
+          eventClick={
+            function (args) {
+              alert(args.event.title)
+            }
+          }
         />
  
     </>

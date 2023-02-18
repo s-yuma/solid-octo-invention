@@ -8,7 +8,11 @@ export default function HomeHeader() {
           initial-scale=1.0, maximum-scale=5.0" />
         <title >テストページ</title>
         </Head>
-            <header className={styles.header}>医療マネージメント</header>
+            <header className={styles.header}>
+                <div className={styles.title}>
+                    FMM
+                </div>
+            </header>
         </>
     )
 }

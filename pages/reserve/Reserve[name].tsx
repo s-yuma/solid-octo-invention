@@ -24,7 +24,7 @@ export default function Reserve() {
   return (
     <>
         <Header/>
-        <Sidebar /> 
+        {/* <Sidebar />  */}
         <Calender name={name} />
   </>
   );

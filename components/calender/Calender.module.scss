@@ -1,7 +1,6 @@
 .container {
     scale: 0.8;
     width: 100%;
-    background-color: aqua;
     text-align: center;
 }
 
@@ -11,7 +10,7 @@
 }
 
 .button {
-    background-Color: rgb(228, 244, 229);
+    background-Color: rgb(244, 244, 228);
     border-Radius: 25%;
     width: 60px;
     &:active {
@@ -35,6 +34,7 @@
 
 .calender {
     margin-top: 10px;
+    padding: 20px;
     font-size: small;
     
 }
@@ -43,7 +43,6 @@
     .container {
         scale: 0.8;
         width: 100%;
-        background-color: rgb(242, 0, 255);
         text-align: center;
     }
     
@@ -87,7 +86,6 @@
     .container {
         scale: 0.9;
         width: 70%;
-        background-color: rgb(230, 200, 195);
         margin-left: 150px;
         margin-top: -170px;
     }
@@ -133,7 +131,6 @@
     .container {
         scale: 0.9;
         width: 70%;
-        background-color: rgb(242, 255, 0);
         margin-left: 250px;
         margin-top: -150px;
     }
@@ -186,7 +183,6 @@
     .container {
         scale: 0.9;
         width: 70%;
-        background-color: rgb(43, 0, 255);
         margin-left: 120px;
         margin-top: -160px;
        
