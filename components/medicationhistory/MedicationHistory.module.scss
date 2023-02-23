@@ -265,7 +265,6 @@ $color: #eebc1a;
     .title {
         width: 95vw;
         text-align: center;
-        background-color: rgb(0, 255, 213);
     }
     
     .form {
@@ -281,7 +280,10 @@ $color: #eebc1a;
     .button {
         width: 80px;
         height: 55px;
-        background-color: rgb(223, 185, 221);
+        background-color: orange;
+        &:hover {
+            background-color: gray;
+        }
     }
     
     .accodion {
@@ -301,6 +303,7 @@ $color: #eebc1a;
     }
     
     .ListTitle {
+        margin-top: 20px;
         justify-content: center;
         display: flex;
     }
@@ -311,7 +314,7 @@ $color: #eebc1a;
         color: green;
         border-color: green;
         height: 30px;
-        margin-top: 15px;
+        margin-top: 1px;
     }
  
 }

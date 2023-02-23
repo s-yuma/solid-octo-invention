@@ -12,7 +12,7 @@
     opacity: 0.9;
     z-index: 99;
     height: 15%;
-    background-color: rgb(231, 239, 237);
+    background-color: rgb(149, 160, 157);
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
 
@@ -23,10 +23,10 @@
     height: 50px;
     border-radius: 20%;
     margin-left: 10px;
-    background-color: rgba(124, 218, 187, 0.637);
+    background-color: rgb(213, 177, 109);
     color: #ffff;
     &:hover {
-        background-color: white;
+        background-color: rgb(174, 171, 171);
     }
 }
 
@@ -135,10 +135,10 @@
         height: 50px;
         border-radius: 15%;
         margin-left: 10px;
-        background-color: rgba(124, 218, 187, 0.637);
+        background-color:orange;
         color: #ffff;
         &:hover {
-            background-color: white;
+            background-color: gray;
         }
     }
     
@@ -178,7 +178,7 @@
         font-size: 0;
         opacity: 0.9;
         height: 15%;
-        background-color: rgb(231, 239, 237);
+        background-color: orange;
     }
     
     .button {
@@ -190,7 +190,7 @@
         background-color: rgba(124, 218, 187, 0.637);
         color: #ffff;
         &:hover {
-            background-color: white;
+            background-color: gray;
         }
     }
     
@@ -243,10 +243,10 @@
         height: 15vh;
         border-radius: 20%;
         margin-left: 10px;
-        background-color: rgba(124, 218, 187, 0.637);
+        background-color: orange;
         color: #ffff;
         &:hover {
-            background-color: white;
+            background-color: gray;
         }
     }
     

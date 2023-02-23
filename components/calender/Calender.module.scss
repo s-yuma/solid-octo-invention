@@ -10,11 +10,15 @@
 }
 
 .button {
-    background-Color: rgb(244, 244, 228);
+    color: black;
+    background-Color:orange;
+    border-color: gray;
+    border-width: 2px;
     border-Radius: 25%;
-    width: 60px;
+    width: 70px;
     &:active {
-        background-color: rgb(151, 209, 184);
+        background-color: black;
+        color: orange;
     }
 }
 
@@ -181,12 +185,8 @@
 ------------------------------ */
 @media screen and (min-width:1280px) {
     .container {
-        scale: 0.9;
-        width: 70%;
+        width: 80%;
         margin-left: 120px;
-        margin-top: -160px;
-       
-        
     }
     
     .form {
@@ -197,11 +197,11 @@
     }
     
     .button {
-        background-Color: rgb(228, 244, 229);
+        background-Color: orange;
         border-Radius: 25%;
         width: 60px;
         &:active {
-            background-color: rgb(151, 209, 184);
+            background-color: gray;
         }
     }
     
@@ -219,10 +219,10 @@
         background-color: white;
     }
     .calender {
-        margin-left: 170px;
         margin-top: 10px;
-        width: 85%;
-        position: absolute;
+        width: 100vw;
+        padding: 10px;
+        height: 50vw;
     }
  
 }
